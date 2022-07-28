@@ -21,6 +21,27 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+/*==================== SCROLL SECCIONES LINK ACTIVAS ====================*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sections = current.getAttribute('id');
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sections + ']').classList.add('active');
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sections + ']').classList.remove('active');
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+
 /*===== SCROLL ANIMACIÓN REVELAR =====*/
 const sr = ScrollReveal({
     origin: 'top',
