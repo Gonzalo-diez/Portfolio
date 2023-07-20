@@ -330,6 +330,33 @@ img {
   width: 75%;
 }
 
+/*=== Educación ===*/
+.education__container {
+  margin-top: 2rem;
+  row-gap: 2rem;
+}
+
+.education__text {
+  font-size: 1.5rem;
+  row-gap: 2rem;
+  text-align: center;
+}
+
+.education__container .education__title {
+  color: var(--first-color);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.education__container .education__title:hover {
+  color: black;
+}
+
+#education > div > div > a > img {
+  width: 100%;
+}
+
+
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
