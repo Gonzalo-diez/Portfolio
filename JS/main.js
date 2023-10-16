@@ -22,24 +22,26 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECCIONES LINK ACTIVAS ====================*/
-const sections = document.querySelectorAll('section[id]')
+let sections = document.querySelectorAll('section[id]');
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+function scrollActive() {
+    const scrollY = window.pageYOffset;
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sections = current.getAttribute('id');
+        const sectionId = current.getAttribute('id'); // Almacena el atributo 'id' en una variable diferente
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sections + ']').classList.add('active');
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sections + ']').classList.remove('active');
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active');
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active');
         }
-    })
+    });
 }
-window.addEventListener('scroll', scrollActive)
+
+window.addEventListener('scroll', scrollActive);
+
 
 
 /*===== SCROLL ANIMACIÓN REVELAR =====*/
