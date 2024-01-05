@@ -227,8 +227,28 @@ img {
   z-index: var(--z-back);
 }
 
-.skills__full {
-  width: 100%;
+.skills__web {
+  width: 90%;
+}
+
+.skills__js {
+  width: 80%;
+}
+
+.skills__react {
+  width: 75%;
+}
+
+.skills__sql {
+  width: 80%;
+}
+
+.skills__wp {
+  width: 80%;
+}
+
+.skills__py {
+  width: 70%;
 }
 
 .skills__c {
