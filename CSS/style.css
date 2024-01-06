@@ -51,6 +51,10 @@ body {
   color: var(--second-color);
 }
 
+#content-en {
+  display: none;
+}
+
 h1, h2, p {
   margin: 0;
 }
